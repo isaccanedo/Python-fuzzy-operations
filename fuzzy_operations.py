@@ -30,23 +30,33 @@ if __name__ == "__main__":
     # 1. União = max (µA (x), µB (x))
     union = fuzz.fuzzy_or(X, young, X, middle_aged)[1]
     # 2. Intersection = min(µA(x), µB(x))
+    # 2. Intersecção = min (µA (x), µB (x))
     intersection = fuzz.fuzzy_and(X, young, X, middle_aged)[1]
     # 3. Complement (A) = (1- min(µA(x))
+    # 3. Complemento (A) = (1- min (µA (x))
     complement_a = fuzz.fuzzy_not(young)
     # 4. Difference (A/B) = min(µA(x),(1- µB(x)))
+    # 4. Diferença (A / B) = min (µA (x), (1- µB (x)))
     difference = fuzz.fuzzy_and(X, young, X, fuzz.fuzzy_not(middle_aged)[1])[1]
     # 5. Algebraic Sum = [µA(x) + µB(x) – (µA(x) * µB(x))]
+    # 5. Soma algébrica = [µA (x) + µB (x) - (µA (x) * µB (x))]
     alg_sum = young + middle_aged - (young * middle_aged)
     # 6. Algebraic Product = (µA(x) * µB(x))
+    # 6. Produto Algébrico = (µA (x) * µB (x))
     alg_product = young * middle_aged
     # 7. Bounded Sum = min[1,(µA(x), µB(x))]
+    # 7. Soma limitada = min [1, (µA (x), µB (x))]
     bdd_sum = fuzz.fuzzy_and(X, one, X, young + middle_aged)[1]
     # 8. Bounded difference = min[0,(µA(x), µB(x))]
+    # 8. Diferença limitada = min [0, (µA (x), µB (x))]
     bdd_difference = fuzz.fuzzy_or(X, zero, X, young - middle_aged)[1]
 
     # max-min composition
+    # composição max-min
     # max-product composition
+    # composição máxima do produto
 
+    # Plot each set A, set B and each operation result using plot() and subplot().
     # Plot each set A, set B and each operation result using plot() and subplot().
     from matplotlib import pyplot as plt
 
@@ -104,3 +114,5 @@ if __name__ == "__main__":
 
     plt.subplots_adjust(hspace=0.5)
     plt.show()
+    
+    BLA,BLA,BLA
