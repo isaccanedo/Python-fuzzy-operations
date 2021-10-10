@@ -114,5 +114,3 @@ if __name__ == "__main__":
 
     plt.subplots_adjust(hspace=0.5)
     plt.show()
-    
-    BLA,BLA,BLA
