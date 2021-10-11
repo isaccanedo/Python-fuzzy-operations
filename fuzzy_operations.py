@@ -23,8 +23,7 @@ if __name__ == "__main__":
 
     # Calcule as diferentes operações usando funções integradas.
     one = np.ones(75)
-    zero = np.zeros((75,))
-    # 1. Union = max(µA(x), µB(x))
+    zero = np.zeros((75,))    
     # 1. União = max (µA (x), µB (x))
     union = fuzz.fuzzy_or(X, young, X, middle_aged)[1]
     # 2. Intersection = min(µA(x), µB(x))
