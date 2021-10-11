@@ -25,8 +25,7 @@ if __name__ == "__main__":
     one = np.ones(75)
     zero = np.zeros((75,))    
     # 1. União = max (µA (x), µB (x))
-    union = fuzz.fuzzy_or(X, young, X, middle_aged)[1]
-    # 2. Intersection = min(µA(x), µB(x))
+    union = fuzz.fuzzy_or(X, young, X, middle_aged)[1]    
     # 2. Intersecção = min (µA (x), µB (x))
     intersection = fuzz.fuzzy_and(X, young, X, middle_aged)[1]
     # 3. Complement (A) = (1- min(µA(x))
