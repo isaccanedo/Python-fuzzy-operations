@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # Crie um universo de discurso em Python usando linspace()
     X = np.linspace(start=0, stop=75, num=75, endpoint=True, retstep=False)
 
-    # Create two fuzzy sets by defining any membership function
+    
     # Crie dois conjuntos difusos definindo qualquer função de pertinência
     # (trapmf(), gbellmf(), gaussmf(), etc).
     abc1 = [0, 25, 50]
