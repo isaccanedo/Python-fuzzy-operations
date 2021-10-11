@@ -29,8 +29,7 @@ if __name__ == "__main__":
     # 2. Intersecção = min (µA (x), µB (x))
     intersection = fuzz.fuzzy_and(X, young, X, middle_aged)[1]   
     # 3. Complemento (A) = (1- min (µA (x))
-    complement_a = fuzz.fuzzy_not(young)
-    # 4. Difference (A/B) = min(µA(x),(1- µB(x)))
+    complement_a = fuzz.fuzzy_not(young)    
     # 4. Diferença (A / B) = min (µA (x), (1- µB (x)))
     difference = fuzz.fuzzy_and(X, young, X, fuzz.fuzzy_not(middle_aged)[1])[1]
     # 5. Algebraic Sum = [µA(x) + µB(x) – (µA(x) * µB(x))]
