@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # composição max-min   
     # composição máxima do produto
     
-    # Plot each set A, set B and each operation result using plot() and subplot().
+    # Plote cada conjunto A, conjunto B e cada resultado da operação usando plot() e subplot().
     from matplotlib import pyplot as plt
 
     plt.figure()
