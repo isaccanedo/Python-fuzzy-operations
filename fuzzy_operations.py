@@ -40,8 +40,7 @@ if __name__ == "__main__":
     bdd_sum = fuzz.fuzzy_and(X, one, X, young + middle_aged)[1]   
     # 8. Diferença limitada = min [0, (µA (x), µB (x))]
     bdd_difference = fuzz.fuzzy_or(X, zero, X, young - middle_aged)[1]
-
-    # max-min composition
+    
     # composição max-min
     # max-product composition
     # composição máxima do produto
