@@ -35,8 +35,7 @@ if __name__ == "__main__":
     # 5. Soma algébrica = [µA (x) + µB (x) - (µA (x) * µB (x))]
     alg_sum = young + middle_aged - (young * middle_aged)   
     # 6. Produto Algébrico = (µA (x) * µB (x))
-    alg_product = young * middle_aged
-    # 7. Bounded Sum = min[1,(µA(x), µB(x))]
+    alg_product = young * middle_aged    
     # 7. Soma limitada = min [1, (µA (x), µB (x))]
     bdd_sum = fuzz.fuzzy_and(X, one, X, young + middle_aged)[1]
     # 8. Bounded difference = min[0,(µA(x), µB(x))]
