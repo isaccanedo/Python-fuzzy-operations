@@ -22,7 +22,6 @@ if __name__ == "__main__":
     young = fuzz.membership.trimf(X, abc1)
     middle_aged = fuzz.membership.trimf(X, abc2)
 
-    # Compute the different operations using inbuilt functions.
     # Calcule as diferentes operações usando funções integradas.
     one = np.ones(75)
     zero = np.zeros((75,))
