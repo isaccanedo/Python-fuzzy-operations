@@ -33,8 +33,7 @@ if __name__ == "__main__":
     # 4. Diferença (A / B) = min (µA (x), (1- µB (x)))
     difference = fuzz.fuzzy_and(X, young, X, fuzz.fuzzy_not(middle_aged)[1])[1]   
     # 5. Soma algébrica = [µA (x) + µB (x) - (µA (x) * µB (x))]
-    alg_sum = young + middle_aged - (young * middle_aged)
-    # 6. Algebraic Product = (µA(x) * µB(x))
+    alg_sum = young + middle_aged - (young * middle_aged)   
     # 6. Produto Algébrico = (µA (x) * µB (x))
     alg_product = young * middle_aged
     # 7. Bounded Sum = min[1,(µA(x), µB(x))]
