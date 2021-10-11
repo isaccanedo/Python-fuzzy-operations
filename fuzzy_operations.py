@@ -37,8 +37,7 @@ if __name__ == "__main__":
     # 6. Produto Algébrico = (µA (x) * µB (x))
     alg_product = young * middle_aged    
     # 7. Soma limitada = min [1, (µA (x), µB (x))]
-    bdd_sum = fuzz.fuzzy_and(X, one, X, young + middle_aged)[1]
-    # 8. Bounded difference = min[0,(µA(x), µB(x))]
+    bdd_sum = fuzz.fuzzy_and(X, one, X, young + middle_aged)[1]   
     # 8. Diferença limitada = min [0, (µA (x), µB (x))]
     bdd_difference = fuzz.fuzzy_or(X, zero, X, young - middle_aged)[1]
 
